@@ -1,0 +1,27 @@
+{
+  "name": "KnowHow",
+  "version": "0.0.0",
+  "authors": [
+    "Ilson Nóbrega <ilson@inobrega.com.br>"
+  ],
+  "description": "Sistema de gestão empresarial da Know How",
+  "main": "/static/css/main.css",
+  "moduleType": [
+    "node"
+  ],
+  "license": "none",
+  "homepage": "http://inobrega.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0",
+    "fontawesome": "~4.0.3"
+  }
+}

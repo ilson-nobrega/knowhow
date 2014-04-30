@@ -1,0 +1,15 @@
+doctype html
+html
+	form(action="/signup", method="POST")
+		input(placeholder="Nome", name="contato[nome]")
+		input(placeholder="CPF", name="contato[registroNacional]")
+		input(placeholder="RG", name="contato[registroEstadual]")
+		input(type="hidden", name="contato[tipo]", value="pessoaFisica")
+		input(placeholder="EMAIL", name="usuario[email]")
+		input(placeholder="Senha", name="usuario[senha]")
+		input(type="hidden", name="usuario[perfis]", value="administrativo")
+		
+		button: | Enviar
+	br
+	a(href="/usuarios")
+		| Voltar para listagem

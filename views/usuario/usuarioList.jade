@@ -1,0 +1,26 @@
+if usuarios.length > 0
+	table
+		thead
+			tr
+				th: | #
+				th: | Nome
+				th: | Email
+				th: | Ações
+		tbody
+			each usuario in usuarios
+				tr
+					td: | #{usuario.id}
+					td: | #{usuario.nome}
+					td: | #{usuario.email}
+					td
+						a(href="/usuario/#{usuario.id}")
+							| Editar
+						| &nbsp;
+						form(action="/usuario/#{usuario.id}", method="POST", style="display: inline;")
+							button(name="_method", value="DELETE")
+								| Deletar
+else
+	| Sem usuarios para exibir
+br
+a(href="/usuario")
+	| Cadastrar

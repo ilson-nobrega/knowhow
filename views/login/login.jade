@@ -1,0 +1,39 @@
+html
+    head
+        <script src="jquery/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-theme.min.css">
+        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="fontawesome/css/font-awesome.css" rel="stylesheet">
+        
+    body
+        .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+            .container
+                .navbar-header
+                    button.navbar-toggle(data-toggle="collapse", data-target=".navbar-collapse")
+                        span.sr-only: | Toggle Navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand: | Know How - AVA
+                .navbar-collapse.collapse
+                    form.navbar-form.navbar-right(role="form")
+                        .form-group
+                            input.form-control(placeholder="Email", type="text")
+                        .form-group
+                            input.form-control(placeholder="Senha", type="password")
+                        .button.btn.btn-success(type="submit")
+                            | Enviar
+        .jumbotron(style="margin-top: 40px;")
+            .container
+                h2 
+                    i.fa.fa-lock.fa-lg
+                    |  Acesso Restrito
+                p: | Ainda não possui sua chave de acesso ao AVA?
+                p: a.btn.btn-primary.btn-lg(role="button", href="/cadastro")
+                        | Cadastre-se já!
+        .container
+            hr
+            footer
+                p: | &copy; 2014 Know How - Todos os direitos reservados
+                p: | Tecnologia desenvolvida por Inóbrega - Tecnologia e Marketing Digital

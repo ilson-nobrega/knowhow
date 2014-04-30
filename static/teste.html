@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Teste Física Ju</title>
+<style type="text/css">
+    .pessoaFisica{
+        padding: 20px;
+        margin-top: 20px;
+        border: 1px solid #000;
+    }
+    .pessoaJuridica{
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+        border: 1px solid #000;
+    }
+    .red{ background: #ff0000; }
+    .green{ background: #00ff00; }
+    .blue{ background: #0000ff; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="radio"]').click(function(){
+            if($(this).attr("value")=="pessoaJuridica"){
+                $(".pessoaFisica").hide();
+                $(".pessoaJuridica").show();
+            }
+            if($(this).attr("value")=="pessoaFisica"){
+                $(".pessoaJuridica").hide();
+                $(".pessoaFisica").show();
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <div>
+        <label><input type="radio" name="tipo" value="pessoaFisica" checked>Pessoa Física</label>
+        <label><input type="radio" name="tipo" value="pessoaJuridica">Pessoa Jurídica</label>
+    </div>
+    <div class="pessoaFisica">Isso é uma pessoa física</div>
+    <div class="pessoaJuridica">E isso uma jurídica</div>
+</body>
+</html>
